@@ -1,0 +1,16 @@
+version: "3"
+services:
+  app:
+    container_name: bestcodecomment-node
+    build: ./
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../:/app:rw,cached
+    links:
+      - mongo
+  mongo:
+    container_name: bestcodecomment-mongo
+    image: mongo
+    ports:
+      - "27017:27017"
