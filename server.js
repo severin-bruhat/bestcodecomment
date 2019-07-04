@@ -19,9 +19,9 @@ res.json({"API" : "Best Code Comment"});
 app.use('/users', users);
 // private route
 app.use('/comments', validateUser, comments);
-app.get('/favicon.ico', function(req, res) {
-    res.sendStatus(204);
-});
+// app.get('/favicon.ico', function(req, res) {
+//     res.sendStatus(204);
+// });
 function validateUser(req, res, next) {
   jwt.verify(req.headers['x-access-token'], req.app.get('secretKey'), function(err, decoded) {
     if (err) {
