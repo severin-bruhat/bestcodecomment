@@ -43,7 +43,7 @@ deleteById: function(req, res, next) {
   });
  },
 create: function(req, res, next) {
-    commentModel.create({ title: req.body.title, comment: req.body.content, created_at: req.body.created_at }, function (err, result) {
+    commentModel.create({ title: req.body.title, content: req.body.content}, function (err, result) {
       if (err) 
        next(err);
       else
