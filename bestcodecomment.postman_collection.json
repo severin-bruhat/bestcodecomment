@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "e51220ba-bb18-4d65-b0bd-a8013f4154c9",
+		"name": "bestcodecomment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "sbruhat@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sbruhat@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "sbruhat@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMWU1NzlmODgxZDQwMTJkYTg5ZjU1YSIsImlhdCI6MTU2MjI3MDkxMywiZXhwIjoxNTYyMjc0NTEzfQ.dgyp1aVrLuGCE6kE0tnTfp45VdgJ7pTSSzkzjguJ_GY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "my first coment",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "blah blah f dgyfgsdyfg jsd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/comments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMWU1NzlmODgxZDQwMTJkYTg5ZjU1YSIsImlhdCI6MTU2MjI3MDkxMywiZXhwIjoxNTYyMjc0NTEzfQ.dgyp1aVrLuGCE6kE0tnTfp45VdgJ7pTSSzkzjguJ_GY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/comments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comments/{id}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMWU1NzlmODgxZDQwMTJkYTg5ZjU1YSIsImlhdCI6MTU2MjI3MDkxMywiZXhwIjoxNTYyMjc0NTEzfQ.dgyp1aVrLuGCE6kE0tnTfp45VdgJ7pTSSzkzjguJ_GY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/comments/5d1e5d62e32f2e165258e7ec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"comments",
+						"5d1e5d62e32f2e165258e7ec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update comment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMWU1NzlmODgxZDQwMTJkYTg5ZjU1YSIsImlhdCI6MTU2MjI3MDkxMywiZXhwIjoxNTYyMjc0NTEzfQ.dgyp1aVrLuGCE6kE0tnTfp45VdgJ7pTSSzkzjguJ_GY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "comment mofified",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/comments/5d1e5d62e32f2e165258e7ec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"comments",
+						"5d1e5d62e32f2e165258e7ec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete comment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMWU1NzlmODgxZDQwMTJkYTg5ZjU1YSIsImlhdCI6MTU2MjI3MDkxMywiZXhwIjoxNTYyMjc0NTEzfQ.dgyp1aVrLuGCE6kE0tnTfp45VdgJ7pTSSzkzjguJ_GY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/comments/5d1e5f2de6ed7416c2c7cb85",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"comments",
+						"5d1e5f2de6ed7416c2c7cb85"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
